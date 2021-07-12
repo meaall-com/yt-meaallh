@@ -68,7 +68,10 @@ if Config.VIDEO_THUMBNAIL == "No":
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
-      caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
+      name_channel = info_dict['channel']
+      channel_id = info_dict['channel_id']
+      formated = info_dict['format']
+      caption = f"""{webpage_url} —— {title} —— {name_channel} —— {channel_id} —— {formated}"""
       duration = int(float(info_dict['duration']))
       width, height = get_resolution(info_dict)
       await message.reply_video(
