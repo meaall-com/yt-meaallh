@@ -64,7 +64,7 @@ if Config.VIDEO_THUMBNAIL == "No":
       if not os.path.isdir(output_directory):
           os.makedirs(output_directory)
       thumb_image_path = f"{output_directory}.png"
-      img.save(thumb_image_path)
+
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
