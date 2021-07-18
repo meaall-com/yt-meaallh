@@ -58,7 +58,7 @@ if Config.VIDEO_THUMBNAIL == "No":
       basename = video_file.rsplit(".", 1)[-2]
       # thumbnail
       thumbnail_url = info_dict['thumbnail']
-      img = message.download(file_name='thumb')
+      img = message.download(file_name='thumb.png')
       im = Image.open(img).convert("RGB")
       output_directory = os.path.join(os.getcwd(), "downloads", "thumb")
       if not os.path.isdir(output_directory):
