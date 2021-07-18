@@ -62,7 +62,7 @@ if Config.VIDEO_THUMBNAIL == "No":
          
          message.download(file_name='ytthumb.png')
          thumbn = os.path.join(os.getcwd(), "downloads", "ytthumb")
-         thumb_path = f"{thumbn}.png"
+         thumb_path = f"{thumbn}"
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
