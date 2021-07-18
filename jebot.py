@@ -58,10 +58,11 @@ if Config.VIDEO_THUMBNAIL == "No":
       basename = video_file.rsplit(".", 1)[-2]
       # thumbnail
       thumbnail_url = info_dict['thumbnail']
-        if message.photo:
-            message.download(file_name='ytthumb.png')
-            thumbn = os.path.join(os.getcwd(), "downloads", "ytthumb")
-            thumb_path = f"{thumbn}.png"
+      if message.photo:
+         
+         message.download(file_name='ytthumb.png')
+         thumbn = os.path.join(os.getcwd(), "downloads", "ytthumb")
+         thumb_path = f"{thumbn}.png"
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
