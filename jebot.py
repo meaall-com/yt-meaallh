@@ -25,8 +25,8 @@ s2tw = OpenCC('s2tw.json').convert
 async def ytdl_with_button(c: Client, message: Message):
     if messsage.text:
         try:
-             url = message.text
-             ydl_opts = {
+            url = message.text
+            ydl_opts = {
                 'format': 'best[ext=mp4]',
                 'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
                 'writethumbnail': True
@@ -102,4 +102,4 @@ def get_resolution(info_dict):
         height = 240
     return (width, height)
 
-Jebot.run()
+Jebot.run()                                         
