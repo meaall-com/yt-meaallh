@@ -23,7 +23,7 @@ s2tw = OpenCC('s2tw.json').convert
 
 @Jebot.on_message(filters.regex(YTDL_REGEX))
 async def ytdl_with_button(c: Client, message: Message):
-    if messsage.text:
+    if message.text:
         try:
             url = message.text
             ydl_opts = {
@@ -102,4 +102,4 @@ def get_resolution(info_dict):
         height = 240
     return (width, height)
 
-Jebot.run()                                         
+Jebot.run()
