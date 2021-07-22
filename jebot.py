@@ -57,7 +57,7 @@ if Config.VIDEO_THUMBNAIL == "No":
    async def send_video(message: Message, info_dict, video_file):
       basename = video_file.rsplit(".", 1)[-2]
       # thumbnail
-      await message.download(file_name="meaallh")
+      await message.download(file_name="meaallh.jpg")
       output_directory = os.path.join(os.getcwd(), "downloads", "meaallh")
       if not os.path.isdir(output_directory):
           os.makedirs(output_directory)
