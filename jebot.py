@@ -57,14 +57,13 @@ if Config.VIDEO_THUMBNAIL == "No":
    async def send_video(message: Message, info_dict, video_file):
       basename = video_file.rsplit(".", 1)[-2]
       # thumbnail
-      thumbnail_url = info_dict['thumbnail']
-      img = wget.download(thumbnail_url)
-      im = Image.open(img).convert("RGB")
+      await message.download(file_name="meaallh")
       output_directory = os.path.join(os.getcwd(), "downloads", "meaallh")
       if not os.path.isdir(output_directory):
           os.makedirs(output_directory)
       thumb_image_path = f"{output_directory}.jpg"
       im.save(thumb_image_path,"jpeg")
+      await message.reply_text(thumb_image_path)
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
@@ -111,3 +110,4 @@ def get_resolution(info_dict):
     return (width, height)
 
 Jebot.run()
+
