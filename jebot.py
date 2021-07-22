@@ -29,7 +29,7 @@ s2tw = OpenCC('s2tw.json').convert
 async def ytdl_with_button(c: Client, message: Message):
     try:
         # url = callback_query.message.text
-        url = message.text
+        url = message.caption
         ydl_opts = {
             'format': 'best[ext=mp4]',
             'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
