@@ -8,7 +8,6 @@ from youtube_dl import YoutubeDL
 from opencc import OpenCC
 from config import Config
 import wget
-import random
 from PIL import Image
 
 Jebot = Client(
@@ -58,11 +57,8 @@ if Config.VIDEO_THUMBNAIL == "No":
    async def send_video(message: Message, info_dict, video_file):
       basename = video_file.rsplit(".", 1)[-2]
       # thumbnail
-      str_var = list("QWERTzxcvbLKJH")
-      random.shuffle(str_var)
-      shuffles = ''.join(str_var)
-      await message.download(file_name=f"{shuffles}.jpg")
-      output_directory = os.path.join(os.getcwd(), "downloads", f"{shuffles}")
+      await message.download(file_name="meaallh.jpg")
+      output_directory = os.path.join(os.getcwd(), "downloads", "meaallh")
       if not os.path.isdir(output_directory):
           os.makedirs(output_directory)
       thumb_image_path = f"{output_directory}.jpg"
@@ -112,4 +108,3 @@ def get_resolution(info_dict):
     return (width, height)
 
 Jebot.run()
-
