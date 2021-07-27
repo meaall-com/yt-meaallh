@@ -28,7 +28,6 @@ s2tw = OpenCC('s2tw.json').convert
 @Jebot.on_message(filters.regex(YTDL_REGEX))
 async def ytdl_with_button(c: Client, message: Message):
     try:
-        # url = callback_query.message.text
         url = message.caption
         ydl_opts = {
             'format': 'best[ext=mp4]',
