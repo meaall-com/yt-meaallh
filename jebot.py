@@ -47,7 +47,6 @@ async def ytdl_with_button(c: Client, message: Message):
                 await asyncio.sleep(3)
                 await message.reply_chat_action("upload_document")
             await message.reply_chat_action("cancel")
-            await message.delete()
     except Exception as e:
         await message.reply_text(e)
     await message.delete()
@@ -61,6 +60,7 @@ if Config.VIDEO_THUMBNAIL == "No":
       if not os.path.isdir(output_directory):
           os.makedirs(output_directory)
       thumb_image_path = f"{output_directory}.jpg"
+      await message.reply_text(thumb_image_path)
       # info (s2tw)
       webpage_url = info_dict['webpage_url']
       title = s2tw(info_dict['title'])
